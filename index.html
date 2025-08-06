@@ -11,7 +11,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Noto Sans JP', sans-serif; background-color: #F8F7F5; }
-        .timeline-item::before { content: ''; position: absolute; top: 1rem; left: -1.6rem; width: 1rem; height: 1rem; background-color: #D4AF37; border-radius: 9999px; border: 4px solid #F8F7F5; }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 0.7rem; /* Adjusted for vertical alignment */
+            left: -2.5rem; /* Positioned relative to the new padding */
+            width: 1rem;
+            height: 1rem;
+            background-color: #D4AF37;
+            border-radius: 9999px;
+            border: 4px solid #F8F7F5;
+        }
         .filter-btn { transition: all 0.3s ease; }
         .filter-btn.active { background-color: #2F4F4F; color: #FFFFFF; transform: scale(1.05); }
         .filter-btn:not(.active) { background-color: #FFFFFF; color: #2F4F4F; }
@@ -50,7 +60,7 @@
                 </div>
             </div>
 
-            <div id="timeline-container" class="relative border-l-2 border-gray-200 ml-6">
+            <div id="timeline-container" class="relative border-l-2 border-gray-200 pl-8">
             </div>
         </main>
 
@@ -61,10 +71,10 @@
             { date: '8月9日(金)', time: '19:32', venue: '西おどり広場', type: '舞台踊り', cost: '無料', festival: '鳴門市阿波踊り', performers: ['あすみ', 'ゆづき'] },
             { date: '8月9日(金)', time: '20:23', venue: '大道おどり通り', type: '流し踊り', cost: '無料', festival: '鳴門市阿波踊り', performers: ['あすみ', 'ゆづき'] },
             { date: '8月9日(金)', time: '21:26', venue: '東演舞場', type: '舞台踊り', cost: '無料', festival: '鳴門市阿波踊り', performers: ['あすみ', 'ゆづき'] },
-            { date: '8月11日(月)', time: '12:00', venue: 'アスティとくしま', type: '開会式[優りび]', cost: 'その他', festival: '徳島市阿波踊り', performers: ['ゆう'] },
-            { date: '8月11日(月)', time: '15:30', venue: 'アスティとくしま', type: '開会式[優りび]', cost: 'その他', festival: '徳島市阿波踊り', performers: ['ゆう'] },
-            { date: '8月11日(月)', time: '19:00', venue: 'アスティとくしま', type: '開会式[優りび]', cost: 'その他', festival: '徳島市阿波踊り', performers: ['ゆう'] },
-            { date: '8月12日(火)', time: '10:00', venue: '徳島駅前', type: '阿波踊り振興協会合同流し踊り', cost: 'その他', festival: '徳島市阿波踊り', performers: ['ゆう'] },
+            { date: '8月11日(月)', time: '12:00', venue: 'アスティとくしま', type: '開会式[優りび]', cost: '有料', festival: '徳島市阿波踊り', performers: ['ゆう'] },
+            { date: '8月11日(月)', time: '15:30', venue: 'アスティとくしま', type: '開会式[優りび]', cost: '有料', festival: '徳島市阿波踊り', performers: ['ゆう'] },
+            { date: '8月11日(月)', time: '19:00', venue: 'アスティとくしま', type: '開会式[優りび]', cost: '有料', festival: '徳島市阿波踊り', performers: ['ゆう'] },
+            { date: '8月12日(火)', time: '10:00', venue: '徳島駅前', type: '阿波踊り振興協会合同流し踊り', cost: '無料', festival: '徳島市阿波踊り', performers: ['ゆう'] },
             { date: '8月12日(火)', time: '11:00', venue: 'あわぎんホール', type: '舞台公演[祭りび]', cost: '有料', festival: '徳島市阿波踊り', performers: ['ゆう'] },
             { date: '8月12日(火)', time: '13:30', venue: 'あわぎんホール', type: '舞台公演[祭りび]', cost: '有料', festival: '徳島市阿波踊り', performers: ['ゆう'] },
             { date: '8月12日(火)', time: '16:00', venue: 'あわぎんホール', type: '舞台公演[祭りび]', cost: '有料', festival: '徳島市阿波踊り', performers: ['ゆう'] },
@@ -77,7 +87,7 @@
             { date: '8月13日(水)', time: '18:06', venue: 'あわぎん南内町演舞場', type: '流し踊り', cost: '有料', festival: '徳島市阿波踊り', performers: ['あすみ'] },
             { date: '8月13日(水)', time: '19:18', venue: 'ローソン両国本町演舞場', type: '流し踊り', cost: '無料', festival: '徳島市阿波踊り', performers: ['あすみ', 'ゆづき'] },
             { date: '8月13日(水)', time: '20:20', venue: 'Sansan藍場浜演舞場', type: '流し踊り', cost: '有料', festival: '徳島市阿波踊り', performers: ['ゆう'] },
-            { date: '8月13日(水)', time: '21:00', venue: '不明', type: 'ゲリラ輪踊り', cost: '無料', festival: '徳島市阿波踊り', performers: ['ゆう', 'ゆづき'] },
+            { date: '8月13日(水)', time: '21:00', venue: '両国橋付近', type: 'ゲリラ輪踊り', cost: '無料', festival: '徳島市阿波踊り', performers: ['ゆう', 'ゆづき'] },
             { date: '8月13日(水)', time: '21:42', venue: 'あわぎん南内町演舞場', type: '流し踊り(総踊り)', cost: '有料', festival: '徳島市阿波踊り', performers: ['ゆう'] },
             { date: '8月14日(木)', time: '11:00', venue: 'アスティとくしま', type: 'おどりひろば(体験あり!)', cost: '無料', festival: '徳島市阿波踊り', performers: ['あすみ', 'ゆづき'] },
             { date: '8月14日(木)', time: '14:00', venue: 'アスティとくしま', type: 'おどりひろば(体験あり!)', cost: '無料', festival: '徳島市阿波踊り', performers: ['あすみ', 'ゆづき'] },
@@ -119,21 +129,21 @@
             filteredData.forEach(item => {
                 let dateHeader = '';
                 if (item.date !== lastDate) {
-                    dateHeader = `<h3 class="text-xl md:text-2xl font-bold text-[#2F4F4F] mb-4 mt-8 timeline-item -ml-6">${item.date} <span class="text-base font-normal text-gray-500 ml-2">${item.festival}</span></h3>`;
+                    dateHeader = `<h3 class="relative text-xl md:text-2xl font-bold text-[#2F4F4F] mb-4 mt-8 timeline-item">${item.date} <span class="text-base font-normal text-gray-500 ml-2">${item.festival}</span></h3>`;
                     lastDate = item.date;
                 }
                 
                 const costTag = item.cost === '有料' 
-                    ? `<span class="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">有料</span>`
+                    ? `<span class="bg-red-800 text-red-100 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">有料</span>`
                     : item.cost === '無料' 
-                    ? `<span class="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">無料</span>`
+                    ? `<span class="bg-green-800 text-green-100 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">無料</span>`
                     : '';
 
                 const performerTags = item.performers.map(p => {
                     let colorClass = '';
-                    if (p === 'あすみ') colorClass = 'bg-blue-200 text-blue-900';
+                    if (p === 'あすみ') colorClass = 'bg-pink-200 text-pink-900';
                     else if (p === 'ゆづき') colorClass = 'bg-yellow-200 text-yellow-900';
-                    else if (p === 'ゆう') colorClass = 'bg-green-200 text-green-800';
+                    else if (p === 'ゆう') colorClass = 'bg-blue-200 text-blue-800';
                     return `<span class="font-bold ${colorClass} px-2 py-1 rounded-md text-sm">${p}</span>`;
                 }).join(' ');
 
